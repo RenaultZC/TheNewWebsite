@@ -2,7 +2,7 @@ const request = require('request');
 const cheerio =require('cheerio');
 const Iconv = require('iconv-lite');
 
-let info = (session,xh,callback)=>{
+let info = (xh,session,callback)=>{
     let url = 'http://222.24.62.120/xsgrxx.aspx?xh='+xh;
     let option = {
         url : url,
