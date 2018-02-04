@@ -49,3 +49,4 @@ router.use('/info',(req,res)=>{
         returnJSON(res,result,callback);
     });
 });
+module.exports = router;

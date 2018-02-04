@@ -23,7 +23,7 @@ let info = (xh,session,callback)=>{
                 result:{
                     xm : $('#xm')[0].children[0].data,
                     xh : $('#xh')[0].children[0].data,
-                    zy : $('#lbl_xzb')[0].children[0].data
+                    zy : $('#lbl_xzb')[0].children[0].dataq
                 }
             };
         }else{

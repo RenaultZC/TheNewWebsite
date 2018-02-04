@@ -1,5 +1,6 @@
 let returnJSON = (res,result,callbackname)=>{
     let returnjson = null;
+    result = JSON.stringify(result);
     if(callbackname !=='' && callbackname){
         returnjson = `${callbackname}(${result})`;
     }else{
