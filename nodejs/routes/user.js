@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+let router = express.Router();
 
 let getVcode = require('../modules/user/Vcode');
 let userinfo = require('../modules/user/info');
