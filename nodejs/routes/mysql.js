@@ -65,7 +65,15 @@ router.use('/change',(req,res)=>{
 });
 
 router.use('/send',(req,res)=>{
-    send(db,res);
+    let callback;
+    if(req.query.callback){
+        callback = req.query.callback;
+    }else if(req.body.callback){
+        callback = req.body.callback;
+    }
+    send(db,(result)=>{
+        returnJSON(res,result,callback);
+    });
 });
 
 module.exports = router;

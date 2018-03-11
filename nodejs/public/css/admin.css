@@ -1,0 +1,148 @@
+@media screen and (max-width:720px) {
+    body{
+        overflow: hidden;
+        font-family: "华文楷体";
+    }
+    #head{
+        width: 100%;
+        color:white;
+        font-size: 2rem;
+        top: 0;
+        left: 0;
+        background-color: black;
+        position: absolute;
+    }
+    #head span{
+        margin: 1rem;
+    }
+    #head div{
+        width: 2rem;
+        height: 0.3rem;
+        float: right;
+        margin-top:0.5rem;
+        margin-right: 0.5rem;
+        border-top:0.8rem double white ;
+        border-bottom:0.3rem solid white ;
+    }
+    .navigation{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    .navigation li{
+        border-top: 0.1rem  solid white;
+        border-bottom: 0.1rem  solid white;
+        text-align: center;
+    }
+    .navigation .action{
+        color: black;
+        background-color: white;
+        border: 0.5rem solid black;
+        border-radius:2rem ;
+    }
+    #body{
+        margin-top:3rem;
+    }
+    #body ul{
+        border: 0.01rem solid black;
+        list-style-type: none;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    #body ul li{
+        float: left;
+        font-size: 2rem;
+        width: 100%;
+    }
+    #body ul .pass{
+        background: mediumspringgreen;
+        border-radius: 0.5rem;
+        margin: 0.5rem;
+        text-align: center;
+        width: 40%;
+    }
+    #body ul .failed{
+        background-color: orange;
+        border-radius: 0.5rem;
+        margin: 0.5rem;
+        text-align: center;
+        width: 40%;
+    }
+}
+@media screen and (min-width: 721px){
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 华文楷体;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    #head{
+        width: 100%;
+        top: 0;
+        position: fixed;
+        font-size: 3rem;
+        color: white;
+        background-color: black;
+        line-height: 3rem;
+        overflow: hidden;
+        z-index: 1;
+    }
+    #head span{
+        float: left;
+    }
+    #head div{
+        width: 3rem;
+        height: 3rem;
+        background-image:url("../images/logo.png");
+        background-size:100%;
+        float: left;
+        margin-left: 2rem;
+    }
+    #head .navigation{
+        list-style-type: n;
+        overflow: hidden;
+        float: right;
+    }
+    #head .navigation li{
+        float: left;
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+    #body{
+        top: 3rem;
+        left: 50%;
+        margin-left: -340px;
+        position: absolute;
+    }
+    #body ul{
+        overflow: hidden;
+    }
+    #body ul li{
+        float: left;
+        border: 0.1rem solid black;
+        padding: 0.1rem;
+        margin: 0.1rem 0;
+    }
+    #body ul .pass{
+        width: 2rem;
+        text-align: center;
+        border: 0;
+        border-radius: 0.3rem;
+        background-color: mediumspringgreen;
+        margin-left: 0.4rem;
+    }
+    #body ul .failed{
+        width: 3rem;
+        text-align: center;
+        border: 0;
+        border-radius: 0.5rem;
+        background-color: orange;
+        margin-left: 0.4rem;
+    }
+}

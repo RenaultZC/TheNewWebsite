@@ -9,20 +9,30 @@ let login = (username,password,session,Vcode,callback)=>{
         method:"POST",
         encoding : null,
         form:{
-            '__VIEWSTATE':'dDwxNTMxMDk5Mzc0Ozs+lYSKnsl/mKGQ7CKkWFJpv0btUa8=',
-            'txtUserName':username,
-            'Textbox1':'',
-            'Textbox2':password,
-            'txtSecretCode':Vcode,
-            'RadioButtonList1':'ѧ��',
-            'Button1':'',
-            'lbLanguage':'',
-            'hidPdrs':'',
-            'hidsc':''
+            '__VIEWSTATE': 'dDwxNTMxMDk5Mzc0Ozs+lYSKnsl/mKGQ7CKkWFJpv0btUa8=',
+            'txtUserName': username,
+            'Textbox1': '',
+            'TextBox2': password,
+            'txtSecretCode': Vcode,
+            'RadioButtonList1': '%D1%A7%C9%FA',
+            'Button1': '',
+            'lbLanguage': '',
+            'hidPdrs': '',
+            'hidsc': ''
         },
         headers:{
-            Referer:'http://222.24.62.120/',
-            Cookie:session
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+            'Accept-Encoding': 'gzip,deflate',
+            'Accept-Language': 'zh-CN,zh;q=0.9',
+            'Cache-Control': 'max-age=0',
+            'Connection': 'keep-alive',
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Host': '222.24.62.120',
+            'Origin': 'http://222.24.62.120',
+            'Upgrade-Insecure-Requests': '1',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+            'Referer':'http://222.24.62.120/xs_main.aspx?xh='+username,
+            'Cookie':session,
         }
     };
     request(option,(err,response,body)=>{

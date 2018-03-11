@@ -11,7 +11,7 @@ let search = (db,session,type,callback)=>{
                 if(data.length>0){
                     result = {
                         error:false,
-                        result:data[0]
+                        result:data
                     }
                 }else{
                     result = {

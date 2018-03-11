@@ -1,6 +1,7 @@
 let xlsx = require('node-xlsx');
 let fs = require('fs');
-let send = (db,res)=>{
+let send = (db,callback)=>{
+    let result = null;
     let date = [{
         name : 'ALL',
         data : [
@@ -15,10 +16,14 @@ let send = (db,res)=>{
                 date[0].data.push([elem.name, elem.xh, elem.zy, elem.direction, elem.phone, elem.email]);
             }
             let buffer = xlsx.build(date);
-            fs.writeFile(__dirname+'/result.xlsx', buffer, function(err) {
+            fs.writeFile(__dirname+'/../../public/result.xlsx', buffer, function(err) {
                 if (err) throw err;
             });
-            res.sendFile(__dirname+'/result.xlsx');
+            result = {
+                error:false,
+                result:'http://zhangchaoweb.xin/static/result.xlsx'
+            };
+            callback(result);
         }
     });
 };

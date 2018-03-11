@@ -36,11 +36,11 @@ router.use('/login',(req,res)=>{
 
 router.use('/info',(req,res)=>{
     let xh,session,callback;
-    if(req.body.username){
+    if(req.body.xh){
         xh = req.body.xh;
         session = req.body.session;
         callback = req.body.callback;
-    }else if(req.query.username){
+    }else if(req.query.xh){
         xh = req.query.xh;
         session = req.query.session;
         callback = req.query.callback;

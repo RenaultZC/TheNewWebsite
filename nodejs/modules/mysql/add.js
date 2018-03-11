@@ -16,13 +16,13 @@ let add = (db,result1,direction,phone,email,callback)=>{
                     if(err){
                         result = {
                             error:true,
-                            result:'数据库出错'
-                        }
-                    }else{
-                        result = {
-                            error:false,
-                            result:'报名成功'
-                        }
+                        result:'数据库出错'
+                    }
+                }else{
+                    result = {
+                        error:false,
+                        result:'报名成功'
+                    }
                     }
                     callback(result);
                 });
