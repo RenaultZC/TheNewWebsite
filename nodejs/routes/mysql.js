@@ -6,24 +6,27 @@ let add = require('../modules/mysql/add');
 let search = require('../modules/mysql/search');
 let change = require('../modules/mysql/change');
 let send = require('../modules/mysql/sendexcecl');
+let deleteUser = require('../modules/mysql/deleteUser');
 let info = require('../modules/user/info');
 let returnJSON = require('../modules/returnjson');
 let db = mysql.createPool({host:'localhost',user:'web',password:'19980527',database:'website'});
 
 router.use('/add',(req,res)=>{
     let session,xh,direction,phone,email,callback;
-    if(req.query.name){
+    if(req.query.xh){
         xh = req.query.xh;
         direction = req.query.direction;
         callback = req.query.callback;
         phone = req.query.phone;
         email = req.query.email;
-    }else if(req.body.name){
+        session = req.query.session;
+    }else if(req.body.xh){
         xh = req.body.xh;
         direction = req.body.direction;
         callback = req.body.callback;
         phone = req.body.phone;
         email = req.body.email;
+        session = req.body.session;
     }
     info(xh,session,(result1)=>{
         add(db,result1,direction,phone,email,(result)=>{
@@ -72,6 +75,20 @@ router.use('/send',(req,res)=>{
         callback = req.body.callback;
     }
     send(db,(result)=>{
+        returnJSON(res,result,callback);
+    });
+});
+
+router.use('/delete',(req,res)=>{
+    let xh,callback;
+    if(req.query.xh){
+        callback = req.query.callback;
+        xh = req.query.xh;
+    }else if(req.body.xh){
+        callback = req.body.callback;
+        xh = req.body.xh;
+    }
+    deleteUser(db,xh,(result)=>{
         returnJSON(res,result,callback);
     });
 });

@@ -5,6 +5,7 @@ let getVcode = require('../modules/user/Vcode');
 let userinfo = require('../modules/user/info');
 let userlogin = require('../modules/user/login');
 let returnJSON = require('../modules/returnjson');
+let decryption = require('../modules/decryption');
 
 
 router.use('/Vcode',(req,res)=>{
@@ -29,6 +30,7 @@ router.use('/login',(req,res)=>{
         Vcode = req.query.Vcode;
         callback = req.query.callback;
     }
+    password = decryption(password);
     userlogin(username,password,session,Vcode,(result)=>{
         returnJSON(res,result,callback);
     });

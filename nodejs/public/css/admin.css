@@ -114,6 +114,12 @@
         font-size: 1.5rem;
         margin-left: 0.5rem;
     }
+    #head .navigation li:hover{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        border-radius:0.2rem;
+    }
     #body{
         top: 3rem;
         left: 50%;
