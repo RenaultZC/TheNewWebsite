@@ -21,9 +21,9 @@ app.use(cookieSession({
 }));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/user/',user);
-app.use('/mysql/',mysql);
-app.use('/static', express.static('public'));
-app.use('/admin',admin);
+app.use('/api/user',user);
+app.use('/api/mysql',mysql);
+app.use('/api/static', express.static('public'));
+app.use('/api/admin',admin);
 
 app.listen(8080);

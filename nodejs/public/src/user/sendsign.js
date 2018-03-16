@@ -7,7 +7,7 @@ let sendsign = ()=>{
         let direction = document.getElementById("direction");
         direction = direction.options[direction.selectedIndex].value;
         let session = encodeURI(document.cookie);
-        let url = `http://zhangchaoweb.xin/mysql/add?xh=${xh}&session=${session}&direction=${direction}&email=${email}&phone=${phone}&callback=sign`;
+        let url = `http://zhangchaoweb.xin/api/mysql/add?xh=${xh}&session=${session}&direction=${direction}&email=${email}&phone=${phone}&callback=sign`;
         Ajax(url);
     }else{
         alert("请先登录教务系统");

@@ -2,7 +2,7 @@ import Ajax from "../ajax";
 let NavigationClick = (event)=>{
     let navigation = document.getElementsByClassName("navigation")[0];
     let li = navigation.getElementsByTagName("li");
-    let url = "http://zhangchaoweb.xin/mysql/search?callback=search";
+    let url = "http://zhangchaoweb.xin/api/mysql/search?callback=search";
     for(let i = 0,length = li.length;i < length;i++){
         li[i].className = "";
     }

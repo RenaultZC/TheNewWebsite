@@ -62,7 +62,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "293790753cb4abfd91d2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "01fd0546d2a6e1815738"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -772,7 +772,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ajax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ajax */ \"./src/ajax.js\");\n/* harmony import */ var _ajax__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ajax__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _encryption__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./encryption */ \"./src/encryption.js\");\n/* harmony import */ var _encryption__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_encryption__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\nwindow.admin = (data)=>{\r\n    alert(data.result);\r\n};\r\nwindow.onclick = ()=>{\r\n    let submit = document.getElementById(\"submit\");\r\n    submit.addEventListener(\"click\",(event)=>{\r\n        event.stopPropagation();\r\n        let admin = document.getElementById(\"admin\").value;\r\n        let password = document.getElementById(\"password\").value;\r\n        if(admin === \"\" || password === \"\"){\r\n            alert(\"请输入用户名或密码\");\r\n        }else{\r\n            password = _encryption__WEBPACK_IMPORTED_MODULE_1___default()(password);\r\n            let url = \"zhangchaoweb.xin/admin/login?callback=admin\";\r\n            url = `${url}&admin=${admin}&password=${password}`;\r\n            _ajax__WEBPACK_IMPORTED_MODULE_0___default()(url);\r\n        }\r\n    },false);\r\n    let body = document.getElementsByTagName(\"body\")[0];\r\n    body.style.height = window.innerHeight+\"px\";\r\n};\n\n//# sourceURL=webpack:///./src/adminlogin.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ajax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ajax */ \"./src/ajax.js\");\n/* harmony import */ var _ajax__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ajax__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _encryption__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./encryption */ \"./src/encryption.js\");\n/* harmony import */ var _encryption__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_encryption__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\nwindow.admin = (data)=>{\r\n    alert(data.result);\r\n};\r\nwindow.onload = ()=>{\r\n    let submit = document.getElementById(\"submit\");\r\n    submit.addEventListener(\"click\",()=>{\r\n        let admin = document.getElementById(\"admin\").value;\r\n        let password = document.getElementById(\"password\").value;\r\n        if(admin === \"\" || password === \"\"){\r\n            alert(\"请输入用户名或密码\");\r\n        }else{\r\n            password = _encryption__WEBPACK_IMPORTED_MODULE_1___default()(password);\r\n            let url = \"http://zhangchaoweb.xin/api/admin?callback=admin\";\r\n            url = `${url}&username=${admin}&password=${password}`;\r\n            _ajax__WEBPACK_IMPORTED_MODULE_0___default()(url);\r\n        }\r\n    },false);\r\n};\n\n//# sourceURL=webpack:///./src/adminlogin.js?");
 
 /***/ }),
 

@@ -10,7 +10,7 @@ let RLogin = (data)=>{
         document.getElementById("head").style.display = "none";
         let session = encodeURI(document.cookie);
         let xh = document.getElementById("username").value;
-        let url = `http://zhangchaoweb.xin/user/info?xh=${xh}&session=${session}&callback=getInfo`;
+        let url = `http://zhangchaoweb.xin/api/user/info?xh=${xh}&session=${session}&callback=getInfo`;
         Ajax(url);
     }
     window.TLOGIN = true;
